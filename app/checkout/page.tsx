@@ -93,7 +93,7 @@ export default function CheckoutPage() {
 
   return (
     <PayPalScriptProvider options={{ 
-      "client-id": "test", // Use "test" for simulation, or your Real Client ID
+      clientId: "test", // Use "test" for simulation, or your Real Client ID
       currency: "ILS",
       intent: "capture"
     }}>
