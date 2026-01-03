@@ -201,9 +201,9 @@ export default function CrochetPage() {
         </div>
 
         {/* Main Product Grid */}
-        <div className="flex-1">
+        <div className="flex-1 bg-[#d7d5d4]">
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full border-t border-l border-gray-100 gap-0">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full border-t border-l border-gray-100 gap-1">
               {filteredProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}

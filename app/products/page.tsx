@@ -189,7 +189,7 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-8 bg-[#F7F1EE]">
+      <div className="max-w-[1400px] mx-auto md:px-8 px-6 bg-[#F7F1EE]">
         {/* Horizontal Top Filter */}
         <div className={`mb-12 transition-all duration-300 ${showFilters ? 'block' : 'hidden md:block'}`}>
           <ProductFilters 
@@ -201,9 +201,9 @@ export default function ProductsPage() {
         </div>
 
         {/* Main Product Grid */}
-        <div className="flex-1">
+        <div className="flex-1 bg-[#d7d5d4]">
           {filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full border-t border-l border-gray-100 gap-0">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full border-t border-l border-gray-100 gap-1">
               {filteredProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}

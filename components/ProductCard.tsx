@@ -37,7 +37,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* 1. IMAGE AREA - Only this part triggers the hover image swap */}
       <Link 
         href={`/products/${product.slug}`} 
-        className="relative aspect-[4/5] w-full p-8 md:p-12 cursor-pointer bg-[#F7F1EE] group-hover:bg-[#F7F1EE] transition-colors duration-500"
+        className="relative aspect-4/5 w-full p-8 md:p-12 cursor-pointer bg-[#F7F1EE] group-hover:bg-[#F7F1EE] transition-colors duration-500"
         onMouseEnter={() => setIsHoveringImage(true)}
         onMouseLeave={() => setIsHoveringImage(false)}
       >
@@ -54,7 +54,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             src={activeImage}
             alt={product.name}
             fill
-            className={`object-contain p-8 md:p-12 transition-all duration-700 ease-in-out ${isHoveringImage && hoverImage ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+            className={`object-contain h-full w-full p-2 md:p-12 transition-all duration-700 ease-in-out ${isHoveringImage && hoverImage ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
           />
         )}
 
